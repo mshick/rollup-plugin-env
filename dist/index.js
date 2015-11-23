@@ -6,11 +6,11 @@ var provide = function provide(options) {
     throw new Error("Missing options");
   }
 
-  var processStr = JSON.stringify({ env: options });
+  var optionsStr = JSON.stringify(options);
 
   return {
     intro: function intro() {
-      return "var process = " + processStr + ";";
+      return "\n        var rollupEnv = " + optionsStr + ";\n        var process = process || {};\n        process.env = process.env || {};\n        Object.keys(rollupEnv).forEach(function (prop) {\n          process.env[prop] = rollupEnv[prop];\n        });\n      ";
     }
   };
 };
