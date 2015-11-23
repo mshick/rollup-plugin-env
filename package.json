@@ -1,0 +1,39 @@
+{
+  "name": "rollup-plugin-env",
+  "version": "0.1.0",
+  "description": "Inject environment variables into your rollup.js builds.",
+  "main": "dist/index.js",
+  "jsnext:main": "lib/index.js",
+  "scripts": {
+    "test": "eslint src",
+    "build": "rollup -c",
+    "prepublish": "npm test && npm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mshick/rollup-plugin-env.git"
+  },
+  "keywords": [
+    "rollup",
+    "environment",
+    "build",
+    "process.env",
+    "NODE_ENV"
+  ],
+  "author": "Michael Shick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mshick/rollup-plugin-env/issues"
+  },
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "babel-cli": "^6.2.0",
+    "babel-preset-es2015-rollup": "^1.0.0",
+    "eslint": "^1.9.0",
+    "eslint-config-defaults": "^7.0.1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "rollup": "^0.21.0",
+    "rollup-plugin-babel": "^2.1.0"
+  },
+  "homepage": "https://github.com/mshick/rollup-plugin-env#readme"
+}
