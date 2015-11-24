@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-env",
-  "version": "0.21.1",
+  "version": "0.21.2",
   "description": "Inject environment variables into your rollup.js builds.",
   "main": "dist/index.js",
   "jsnext:main": "lib/index.js",
