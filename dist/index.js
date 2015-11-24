@@ -10,7 +10,7 @@ var provide = function provide(options) {
 
   return {
     intro: function intro() {
-      return "\nvar rollupEnv = " + optionsStr + ";\nvar process = process || {};\nprocess.env = process.env || {};\nObject.keys(rollupEnv).forEach(function (prop) {\n  process.env[prop] = rollupEnv[prop];\n});";
+      return "\nvar rollupEnv = " + optionsStr + ";\nprocess = process || {};\nprocess.env = process.env || {};\nObject.keys(rollupEnv).forEach(function (prop) {\n  process.env[prop] = rollupEnv[prop];\n});";
     }
   };
 };
